@@ -30,4 +30,23 @@ nav a{
 .registerForm {
   display: flex;
   flex-wrap: wrap;
+
+}
+.cover{
+  width: 400px;
+  margin: 30px 30px;
+  padding: 20px 20px;
+  
+}
+.search{
+  background-color: thistle;
+  padding: 8px 8px 8px 8px;
+  margin: 8px 8px 8px 8px;
+  color: darkolivegreen;
+  justify-content: center;
+ 
+
+}
+h2 {
+  text-align: center;
 }
