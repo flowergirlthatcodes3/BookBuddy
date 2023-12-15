@@ -11,6 +11,7 @@ import Account from './components/Account'
 import SuccessRegi from './components/SuccessRegi'
 import Homepage from './components/Homepage'
 import SearchBar from './components/SearchBar'
+import CheckoutBook from './components/CheckoutBook'
 
 function App() {
   const [token, setToken] = useState(null)
@@ -42,6 +43,7 @@ function App() {
         })
 
         setUser(response.data)
+        //*console.log(response.data)
       }else{
         
         throw 'no token'
@@ -51,6 +53,7 @@ function App() {
     
     attemptLogin()
   },[token])
+
   
   
 
@@ -62,13 +65,13 @@ function App() {
     <h2> Search Your Favorite Book Here: <SearchBar books={books} /></h2>
     
     <Routes>
-      <Route path='/' element={<Homepage />}/>
+      <Route path='/' element={<Homepage books={books} />}/>
       <Route path='/successReg' element={<SuccessRegi />}/>
-      <Route path='/books' element={<Books books={books} />}/>
-      <Route path='/books/:id' element={<SingleBook books={books}/>}/>
+      <Route path='/books' element={<Books books={books} Error={Error} user={user} token={token}/>}/>
+      <Route path='/books/:id' element={<SingleBook books={books} user={user} token={token}/>}/>
       <Route path='/login' element={<Login setUser={setUser} setToken={setToken}/>}/>
       <Route path='/register' element={<Register />}/>
-      <Route path='/account' element={<Account user={user} setUser={setUser} setToken={setToken}/>}/>
+      <Route path='/account' element={<Account user={user} setUser={setUser} setToken={setToken} books={books}/>}/>
     </Routes>
 
       

@@ -9,7 +9,7 @@ const Navigations = ({user}) => {
             {
                 user.email ? (
                     <span>
-                        <Link to="/account">User</Link>
+                        <Link to="/account">My Account</Link>
                     </span>
                 
                 ) : (

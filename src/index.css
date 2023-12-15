@@ -1,5 +1,5 @@
 body {
-  font-family: Georgia, serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #f8f8f8;
   margin: 0;
   padding: 0;
@@ -36,6 +36,7 @@ nav a{
   width: 400px;
   margin: 30px 30px;
   padding: 20px 20px;
+  justify-content: center;
   
 }
 .search{
@@ -49,4 +50,39 @@ nav a{
 }
 h2 {
   text-align: center;
+
+}
+.filter{
+font-size: 16px;
+color: darkslategrey;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.singleBook{
+  text-align: center;
+}
+.allBooks{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+ justify-content: space-between
+
+
+
+}
+ul{
+  list-style: none;
+  justify-content: space-around;
+}
+li a{
+  padding: 1rem;
+  margin: 1rem;
+  transition: all 1s;
+  
+}
+.linkallb {
+  color: plum;
+ justify-content: center;
+ display: flex;
+ 
+  
 }

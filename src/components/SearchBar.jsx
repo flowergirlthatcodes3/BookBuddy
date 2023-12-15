@@ -14,8 +14,8 @@ const SearchBar = ({books}) => {
             </label>
             {
              searchTerm.length > 0 ? 
-                <div> 
-                    <h3>Viewing {filtereredTerms.length} of {books.length}</h3>
+                <div className="filter"> 
+                    <h5>Viewing {filtereredTerms.length} of {books.length}</h5>
                     <ul>
                         {
                           filtereredTerms.map((book) => {
