@@ -4,25 +4,24 @@ import Books from "./Books"
 
 
 const Homepage = ({books}) => {
-    return(
+
+    return (
         <div>
-            
-            <h2>Welcome to our library!</h2> 
-            {
+        
+
+                <h2>Welcome to our library!</h2>
                
                 <Link className="linkallb" to={'/books'}>All Books!</Link>
                
-            }
+          
 
 
-            
+           
 
             
            
 
-            
-              
-
+    
         </div>
     )
 }
