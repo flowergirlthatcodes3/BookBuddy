@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useAsyncError, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 
 const SingleBook = ({books, user}) => {
@@ -32,7 +32,7 @@ const SingleBook = ({books, user}) => {
           )
           navigate('/account')
     } else {
-        throw 'no token'
+        throw 'no token/account created'
     }
 }
      if(!grabMyBook) {
@@ -42,28 +42,31 @@ const SingleBook = ({books, user}) => {
     const onDeck = grabMyBook.available ? "YAYYY, let's read!!" : "OH NO, someone is reading this one!"
 
         return (
-            <div>
+           <div>
+               
             <div className="singleBook">
                 <h1>{grabMyBook.title}</h1>
                 <img className="cover" src={grabMyBook.coverimage}/>
-                <h2> Written By: {grabMyBook.author} </h2>
+                <h2 className="singleBook"> Written By: {grabMyBook.author} </h2>
                 <p>{grabMyBook.description}</p>
                 <h3> Is it on the shelf? {onDeck}</h3>
         
             </div>
+               
+                <button className="goback">
+                <Link to='/books'> Let's Get Back To Our Library! </Link>
+                </button>
+        
             { user.email && (
                 <div className="singleb">
                 <button onClick={handleCheckout} className="checkout">CheckMeOut!</button>
-                
-                <span className="goback"> <Link to='/books'> Let's Get Back To Our Library! </Link>
-                 </span>
-                </div>
-            )}
            
             </div>
         )   
-        }
-
+            }
+    
+</div>
+        )}
     }
 
 export default SingleBook

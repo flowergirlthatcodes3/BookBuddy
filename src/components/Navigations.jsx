@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
 
-const Navigations = ({user}) => {
+const Navigations = ({user,books,}) => {
     
     
     return (
         <nav>
-            <Link to='/books'>Books</Link>
+            <Link to='/books'>Let's Read!</Link>
+            <Link to='/about'>About Us!</Link>
+            
             {
                 user.email ? (
                     <span>
-                        <Link to="/account">My Account</Link>
+                        <Link to="/account">My Account!</Link>
                     </span>
                 
                 ) : (

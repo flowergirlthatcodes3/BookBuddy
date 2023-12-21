@@ -66,19 +66,23 @@ const Account = ({user, setUser, setToken, token, books }) => {
     
     return(
         <div>
-            <h1>Account</h1>
-            <button onClick={() => logout()}>Logout</button>
+             <h2 className="user-read">Look who is reading today: {user.firstname}</h2>
+        
+            <button  onClick={() => logout()}className="logout">Logout</button>
             <hr/>
             <div> 
-            <h2>Look who is reading today: {user.firstname}</h2>
-            <h4>Check Out My Cool Reading List:</h4>
-            <ul>
+           
+            <h4 className="acc2">Check Out My Cool Reading List:</h4>
+            <ul className="acc3">
                 {
                 checkOutBook.map((book) => (
                     <li key={book.id}>
-                        <h4>{book.title}</h4>
-                        <p>The Author: {book.author}</p>
-                        <button onClick={() => handleReturn(book.id)}>Put Me Back On The Shelf!</button>
+                        <h4 className="title">{book.title}</h4>
+                        <p className="auth">The Author: {book.author}</p>
+                        <div className="return">
+                        <button onClick={() => handleReturn(book.id)} className="return-but">Put Me Back On The Shelf!</button>
+                        </div>
+                       
                     </li>
                     ))
                     }

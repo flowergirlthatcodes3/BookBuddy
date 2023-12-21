@@ -4,15 +4,18 @@ const Books = ({books}) => {
        return (
         <div>
          
-    <h1> Check Out Some Cool Books! </h1>
-    <ul>
+    <h1 className="all"> Check Out Some Cool Books! </h1>
+    <ul className="allbooks">
       {
         books.map((book) => {
        return (
-            <li key={book.id}>
-              <Link to={`/books/${book.id}`}>{book.title} </Link>
+        <div key={book.id} >
+           <li key={book.id}>
+              <Link className="linktob" to={`/books/${book.id}`}>{book.title} </Link>
               <br />
             </li>
+        </div>
+           
          
        )
        })
