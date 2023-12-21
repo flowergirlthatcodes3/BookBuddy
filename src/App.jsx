@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import bookLogo from './assets/books.png'
+import bookLogo from './books.png'
 import {Routes, Route, Link,} from 'react-router-dom'
 import Books from'./components/Books'
 import SingleBook from './components/SingleBook'
@@ -11,7 +11,7 @@ import Account from './components/Account'
 import SuccessRegi from './components/SuccessRegi'
 import Homepage from './components/Homepage'
 import About from './components/AboutUs'
-import css from "./index.css"
+
 function App() {
   const [token, setToken] = useState(null)
   const [user, setUser] = useState({})
